@@ -1,0 +1,24 @@
+.main__chat
+  .main__chat__group   
+    .main__chat__group__form
+      %h2.main__chat__group__name
+        = @group.name
+      %ul.main__chat__group__member
+        %p member:
+        %li.main__chat__group__member__list
+        - @group.users.each do |g|
+          = g.name
+    .main__chat__edit-btn
+      = link_to edit_group_path(@group) do
+        Edit
+  .main__chat__message__board      
+    = render @messages
+  .main__chat__text__box
+    .text
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text__area', placeholder: '入力してや'
+        .text__icon            
+          = f.label :image, class: 'input__icon' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'input__image'
+        = f.submit 'Send', class: 'text__send-btn'

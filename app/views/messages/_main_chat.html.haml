@@ -3,9 +3,9 @@
     .main__chat__group__form
       %h2.main__chat__group__name
         = @group.name
-      %ul.main__chat__group__member
-        %p member:
-        %li.main__chat__group__member__list
+      %ul.main__chat__group__menber
+        %p Menber:
+        %li.main__chat__group__menber__list
         - @group.users.each do |g|
           = g.name
     .main__chat__edit-btn
@@ -16,7 +16,7 @@
   .main__chat__text__box
     .text
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'text__area', placeholder: '入力してくれや'
+        = f.text_field :content, class: 'text__area', placeholder: 'タイプしてやーー'
         .text__icon            
           = f.label :image, class: 'input__icon' do
             = icon('fas', 'image', class: 'icon')

@@ -102,6 +102,9 @@ $(function(){
             $('.main__chat__message__board').animate({ scrollTop: $('.main__chat__message__board')[0].scrollHeight});
           });
       })
+      .fail(function(){
+        alert("自動更新に失敗しました")
+      });
     };
   };
   setInterval(reloadMessages, 7000);

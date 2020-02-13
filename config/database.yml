@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: chat-space3_production
+  database: chatspace-3_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock

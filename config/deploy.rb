@@ -3,7 +3,7 @@
 lock '3.11.2'
 
 # Capistranoのログの表示に利用する
-set :application, 'chat-space3_deploy'
+set :application, 'chatspace-3'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:mokakokoro0830/chatspace-3.git'
@@ -16,7 +16,7 @@ set :rbenv_ruby, '2.5.1' #カリキュラム通りに進めた場合、2.5.1か2
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/chatspace3.pem'] 
+                  keys: ['~/.ssh/chatspace.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }

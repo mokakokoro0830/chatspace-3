@@ -47,7 +47,7 @@ $(function(){
                   <div class="message__top-info__text">
                     <img src="${message.image}">
                   </div>`;
-    };
+      };
     return html;
   };
 
